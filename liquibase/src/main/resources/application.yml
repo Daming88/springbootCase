@@ -1,0 +1,41 @@
+
+spring:
+  application:
+    name: liquibase
+  datasource:
+    dynamic:
+      enabled: true
+      primary: huaqiao
+      datasource:
+        test1:
+          url: jdbc:mysql://localhost:3306/test1?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true
+          username: root
+          password: root
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          # 后续注入liquiDatasource的配置
+          jdbcUrl: jdbc:mysql://localhost:3306/test1?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true
+          liquibase:
+            enabled: true
+            change-log: classpath:liquibase/master.xml
+            url: jdbc:mysql://localhost:3306/test1?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true
+            username: root
+            password: root
+            driver-class-name: com.mysql.cj.jdbc.Driver
+
+        test2:
+          url: jdbc:mysql://localhost:3306/test2?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true
+          username: root
+          password: root
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          # 后续注入liquiDatasource的配置
+          jdbcUrl: jdbc:mysql://localhost:3306/test2?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true
+          liquibase:
+            enabled: true
+            change-log: classpath:liquibase/master.xml
+            url: jdbc:mysql://localhost:3306/test2?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true
+            username: root
+            password: root
+            driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+

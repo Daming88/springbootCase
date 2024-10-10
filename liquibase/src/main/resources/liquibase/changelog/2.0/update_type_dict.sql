@@ -1,0 +1,1 @@
+alter table type_dict add column description varchar(255);

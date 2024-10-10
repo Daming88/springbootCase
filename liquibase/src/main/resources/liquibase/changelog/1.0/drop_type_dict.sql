@@ -1,0 +1,1 @@
+drop table type_dict;

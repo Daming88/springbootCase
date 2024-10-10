@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="tagdb" author="daming">
+        <tagDatabase tag="1"/>
+    </changeSet>
+
+    <changeSet id="create_type_dict" author="daming" context="1.0" >
+        <sqlFile path="liquibase/changelog/1.0/create_type_dict.sql"/>
+        <rollback>
+            <sqlFile path="liquibase/changelog/1.0/drop_type_dict.sql"/>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>
