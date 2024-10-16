@@ -11,6 +11,8 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/liquibase/pom.xml" />
+        <option value="$PROJECT_DIR$/flink/pom.xml" />
+        <option value="$PROJECT_DIR$/ip2region/pom.xml" />
       </list>
     </option>
   </component>
